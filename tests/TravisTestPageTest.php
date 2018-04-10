@@ -6,7 +6,7 @@
  * Time: 20:58 น.
  */
 
-namespace Suilven\TravisTestTest;
+namespace Suilven\TravisTest\Tests;
 
 
 use SilverStripe\Dev\SapphireTest;
