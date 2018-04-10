@@ -26,7 +26,7 @@
     "autoload": {
         "psr-4": {
             "Suilven\\TravisTest\\": "src/",
-            "Suilven\\TravisTest\\Tests": "tests/"
+            "Suilven\\TravisTest\\Tests\\": "tests/"
         }
     },
     "scripts": {
