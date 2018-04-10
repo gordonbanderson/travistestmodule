@@ -1,6 +1,6 @@
 {
     "name": "suilven/travistest",
-    "type": "library",
+    "type": "silverstripe-vendormodule",
     "description": "Testing SS4 with Travis",
     "keywords": [
         "suilven",
