@@ -2,9 +2,15 @@ language: php
 
 dist: trusty
 
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+
 env:
   global:
-    - COMPOSER_ROOT_VERSION=4.0.x-dev
+    #- COMPOSER_ROOT_VERSION=4.0.x-dev
+    #From SS Master
+    COMPOSER_ROOT_VERSION=5.x-dev
 
 matrix:
   include:
