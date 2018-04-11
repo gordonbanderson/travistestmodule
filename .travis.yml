@@ -42,4 +42,3 @@ script:
 
 after_success:
   - if [[ $PHPUNIT_COVERAGE_TEST ]]; then bash <(curl -s https://codecov.io/bash) -f coverage.xml; fi
-  - if [[ $PHPUNIT_COVERAGE_TEST ]]; wget https://scrutinizer-ci.com/ocular.phar && php ocular.phar code-coverage:upload --format=php-clover coverage.xml ; fi
