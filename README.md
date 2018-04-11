@@ -1,83 +1,39 @@
-# travistest
+# SilverStripe Module Travis Test
+[![Build Status](https://travis-ci.org/gordonbanderson/travistestmodule.svg?branch=master)](https://travis-ci.org/gordonbanderson/travistestmodule)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gordonbanderson/travistestmodule/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/travistestmodule/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/gordonbanderson/travistestmodule/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/travistestmodule/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/gordonbanderson/travistestmodule/badges/build.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/travistestmodule/build-status/master)
+[![codecov.io](https://codecov.io/github/gordonbanderson/travistestmodule/coverage.svg?branch=master)](https://codecov.io/github/gordonbanderson/travistestmodule?branch=master)
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads][ico-downloads]][link-downloads]
-
-**Note:** Replace ```Gordon Anderson``` ```gordonbanderson``` ```https://github.com/gordonbanderson``` ```gordon.b.anderson@gmail.com``` ```suilven``` ```travistest``` ```Testing SS4 with Travis``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line. You can run `$ php prefill.php` in the command line to make all replacements at once. Delete the file prefill.php as well.
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
-
-## Structure
-
-If any of the following are applicable to your project, then the directory structure should follow industry best practices by being named the following.
-
-```
-bin/        
-config/
-src/
-tests/
-vendor/
-```
+[![Latest Stable Version](https://poser.pugx.org/suilven/travistest/version)](https://packagist.org/packages/suilven/travistest)
+[![Latest Unstable Version](https://poser.pugx.org/suilven/travistest/v/unstable)](//packagist.org/packages/suilven/travistest)
+[![Total Downloads](https://poser.pugx.org/suilven/travistest/downloads)](https://packagist.org/packages/suilven/travistest)
+[![License](https://poser.pugx.org/suilven/travistest/license)](https://packagist.org/packages/suilven/travistest)
+[![Monthly Downloads](https://poser.pugx.org/suilven/travistest/d/monthly)](https://packagist.org/packages/suilven/travistest)
+[![Daily Downloads](https://poser.pugx.org/suilven/travistest/d/daily)](https://packagist.org/packages/suilven/travistest)
 
 
-## Install
+![codecov.io](https://codecov.io/github/gordonbanderson/travistestmodule/branch.svg?branch=master)
 
-Via Composer
+## Running Tests With SilverStripe 4.1
+I ran into problems running tests with SilverStripe 4.1, so I reduced it down to a minimal case in order to repeat and
+then resolve the issues.  This is a meaningless module functionality wise, it's purposes is to provide an example for
+others so they don't headbang like I did.
 
-``` bash
-$ composer require suilven/travistest
-```
+### Gotchas
+* An obvious one in hindsight, but your module must pull in the framework either directly or indirectly
+* The version of PHP Unit needs to be pinned in requires-dev, to version `^5.7`, newer versions cause autoloading issues that prevent SapphireTest
+class from being found (the initial reason I wrote this module). ```"phpunit/phpunit": "^5.7",```
+* With 4.1, one needs to use `--prefer-source` instead of `--prefer-dist`, otherwise test classes do not get downloaded.
+They are now removed from distributions to reduce install size.  See https://github.com/silverstripe/silverstripe-framework/issues/7845
 
-## Usage
 
-``` php
-$skeleton = new Suilven\TravisTest();
-echo $skeleton->echoPhrase('Hello, League!');
-```
-
-## Change log
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
-```
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) for details.
-
-## Security
-
-If you discover any security related issues, please email gordon.b.anderson@gmail.com instead of using the issue tracker.
 
 ## Credits
 
 - [Gordon Anderson][link-author]
-- [All Contributors][link-contributors]
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/suilven/travistest.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/suilven/travistest/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/suilven/travistest.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/suilven/travistest.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/suilven/travistest.svg?style=flat-square
-
-[link-packagist]: https://packagist.org/packages/suilven/travistest
-[link-travis]: https://travis-ci.org/suilven/travistest
-[link-scrutinizer]: https://scrutinizer-ci.com/g/suilven/travistest/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/suilven/travistest
-[link-downloads]: https://packagist.org/packages/suilven/travistest
-[link-author]: https://github.com/gordonbanderson
-[link-contributors]: ../../contributors
