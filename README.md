@@ -5,14 +5,6 @@
 [![Build Status](https://scrutinizer-ci.com/g/gordonbanderson/travistestmodule/badges/build.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/travistestmodule/build-status/master)
 [![codecov.io](https://codecov.io/github/gordonbanderson/travistestmodule/coverage.svg?branch=master)](https://codecov.io/github/gordonbanderson/travistestmodule?branch=master)
 
-[![Latest Stable Version](https://poser.pugx.org/suilven/travistest/version)](https://packagist.org/packages/suilven/travistest)
-[![Latest Unstable Version](https://poser.pugx.org/suilven/travistest/v/unstable)](//packagist.org/packages/suilven/travistest)
-[![Total Downloads](https://poser.pugx.org/suilven/travistest/downloads)](https://packagist.org/packages/suilven/travistest)
-[![License](https://poser.pugx.org/suilven/travistest/license)](https://packagist.org/packages/suilven/travistest)
-[![Monthly Downloads](https://poser.pugx.org/suilven/travistest/d/monthly)](https://packagist.org/packages/suilven/travistest)
-[![Daily Downloads](https://poser.pugx.org/suilven/travistest/d/daily)](https://packagist.org/packages/suilven/travistest)
-
-
 ![codecov.io](https://codecov.io/github/gordonbanderson/travistestmodule/branch.svg?branch=master)
 
 ## Running Tests With SilverStripe 4.1
